@@ -1,10 +1,6 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
-    <ul>
-      <li><a href="javascript:void(0)" target="_blank">Module1</a></li>
-      <li><a href="javascript:void(0)" target="_blank">Module2</a></li>
-    </ul>
   </div>
 </template>
 
@@ -13,29 +9,14 @@ export default {
   name: 'hello',
   data() {
     return {
-      msg: 'Hello Welcome to my app!',
+      msg: 'Hello, Welcome!',
     };
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+h1 {
+    font-weight: normal;
 }
 </style>
