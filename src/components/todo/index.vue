@@ -1,6 +1,16 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <ul>
+        <li v-for="todo in todos">
+          <div>
+            {{ todo.text }}
+          </div>
+          <button v-on:click="sayHello">
+            click me
+          </button>
+        </li>
+      </ul>
   </div>
 </template>
 
@@ -9,8 +19,19 @@ export default {
   name: 'todo',
   data() {
     return {
-      msg: 'This is todo list!',
+      msg: 'This is a todo list!',
+      todos: [
+        { text: 'running' },
+        { text: 'eating' },
+        { text: 'sleeping' },
+      ],
     };
+  },
+  methods: {
+    sayHello: () => {
+      debugger;
+      this.msg.split('').reverse().join('');
+    },
   },
 };
 </script>
@@ -27,11 +48,16 @@ ul {
 }
 
 li {
+  margin: 6px 10px;
+}
+
+li div{
   display: inline-block;
-  margin: 0 10px;
+  width: 100px;
 }
 
 a {
   color: #42b983;
 }
+
 </style>
