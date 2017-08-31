@@ -1,3 +1,4 @@
+
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -6,7 +7,7 @@
           <div>
             {{ todo.text }}
           </div>
-          <button v-on:click="sayHello">
+          <button v-on:click="sayHello(todo)">
             click me
           </button>
         </li>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+/* eslint func-names: 0, no-console: 0, object-shorthand: 0 */
 export default {
   name: 'todo',
   data() {
@@ -28,9 +30,8 @@ export default {
     };
   },
   methods: {
-    sayHello: () => {
-      debugger;
-      this.msg.split('').reverse().join('');
+    sayHello: function (c) {
+      this.msg = c.text;
     },
   },
 };
